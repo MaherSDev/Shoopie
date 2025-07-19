@@ -868,12 +868,166 @@ section{
 	
 }
 
+.register,
+.login{
 
+	form{
+		margin: 0 auto;
+		max-width: 40rem;
+		border-radius: .5rem;
+		padding: 2rem;
+		background: $white;
+		box-shadow: $box-shadow;
+		border: $border;
 
+		h3{
+			font-size: 2.5rem;
+			padding-bottom: 1rem;
+			color: $black;
+			text-transform: uppercase;
+		}
 
+		.box{
+			width: 100%;
+			padding: 1.2rem 1.4rem;
+			border-radius: .5rem;
+			border: $border;
+			font-size: 1.6rem;
+			color: $light-color;
+			text-transform: none;
+			margin: .7rem 0;
+		}
 
+		.remember{
+			display: flex;
+			align-items: center;
+			gap: .5rem;
+			padding-top: 1.5rem;
+			padding-bottom: 1rem;
 
+			label{
+				font-size: 1.5rem;
+				color: $light-color;
+				cursor: pointer;
+			}
+		}
 
+		.btn{
+			width: 100%;
+			text-align: center; 
+
+			&.link{
+				background: $black;
+
+				&:hover{
+					background: $blue;
+				}
+			}
+		}
+
+		p{
+			padding-top: 2rem;
+			font-size: 1.5rem;
+			color: $light-color;
+			text-align: center;
+		}
+	}
+}
+
+.shopping-cart{
+
+	.box-container{
+		@include grid(31rem);
+
+		.box{
+			padding: 2rem;
+			border: $border;
+			background: $white;
+			border-radius: .5rem;
+			box-shadow: $box-shadow;
+			display: flex;
+			align-items: center;
+			gap: .5rem;
+			position: relative;
+
+			.fa-times{
+				position: absolute;
+				top: 1rem; right: 1.5rem;
+				font-size: 2.5rem;
+				color: $light-color;
+				cursor: pointer;
+
+				&:hover{
+					color: $black;
+				}
+			}
+
+			img{
+				height: 12rem;
+			}
+
+			.content{
+
+				h3{
+					font-size: 1.7rem;
+					color: $black;
+				}
+
+				form{
+					padding: 1rem 0;
+					display: flex;
+					gap: .5rem;
+					align-items: center;
+
+					span{
+						font-size: 1.5rem;
+						color: $light-color;
+					}
+
+					input{
+						width: 7rem;
+						padding: .5rem 1.5rem;
+						color: $light-color;
+						border-radius: .5rem;
+						background: $light-bg;
+						font-size: 1.5rem;
+					}
+				}
+
+				.price{
+					font-size: 2rem;
+					color: $blue;
+
+					span{
+						font-size: 1.5rem;
+						color: $light-color;
+						text-decoration: line-through;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cart-total{
+	margin-top: 2rem;
+	box-shadow: $box-shadow;
+	border: $border;
+	border-radius: .5rem;
+	background: $white;
+	padding: 2rem;
+	padding-top: 1rem;
+
+	h3{
+		padding-top: 1rem;
+		font-size: 2rem;
+		color: $black;
+
+		span{
+			color: $blue;
+		}
+	}
+}
 
 
 
@@ -1137,5 +1291,13 @@ section{
 
 	.content form .inputBox input{
 		width: 100%;
+	}
+
+	.shopping-cart .cart-total{
+		text-align: center;
+
+		.btn{
+			width: 100%;
+		}
 	}
 }
